@@ -14,3 +14,11 @@ This project is a Statistical Calculator with the below function in integration 
 
 ## __Pycharm Output__
 ![Screenshot](https://github.com/sainarasimhak/StatsCalculator/blob/master/stats.PNG)
+
+## __References__
+
+* [Statistics formulas](https://stattrek.com/statistics/formulas.aspx)
+* [Inheritance references](https://www.python-course.eu/python3_inheritance.php)
+* [Project skeleton and the base calculator](https://github.com/kaw393939/calculator)
+* [Statistics and seed functions reference](https://github.com/pratik1596/StatsCalculator)
+
