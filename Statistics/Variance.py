@@ -16,5 +16,4 @@ def variance(data):
     for i in data:
         total = addition(total, square(subtraction(i, meanValue)))
 
-    val = division(total, len(data) - 1)
-    return val
+    return division(total, len(data) - 1)

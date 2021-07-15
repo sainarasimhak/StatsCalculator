@@ -6,6 +6,7 @@ from Statistics.Sample_Mean import sample_mean
 from Statistics.Variance import variance
 from Statistics.StandardDeviation import standardDeviation
 
+
 class StatisticsCalculator(Calculator):
     data = []
 
@@ -35,4 +36,3 @@ class StatisticsCalculator(Calculator):
     def sample_mean(self, data):
         self.result = sample_mean(data)
         return self.result
-

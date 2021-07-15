@@ -1,7 +1,7 @@
 import unittest
 import statistics
 from Statistics.statisticsCalculator import StatisticsCalculator
-from CsvReader import CsvReader
+from CsvReader.CsvReader import CsvReader
 from Statistics.GetSample import getSample
 import Fileutilities.RandomGen as tools
 
@@ -20,10 +20,6 @@ class MyTestCase(unittest.TestCase):
     def test_getSample(self):
         data = getSample(self.getData(), 10)
         self.assertEqual(len(data), 10)
-
-    def testMeanStringFails(self):
-        data = ['string1', 'string2', 'string3']
-        self.assertRaises(Exception, self.statistics.mean, data)
 
     def test_mean(self):
         data = getSample(self.getData(), 10)
@@ -47,12 +43,12 @@ class MyTestCase(unittest.TestCase):
     def test_variance(self):
         data = getSample(self.getData(), 10)
         # had to cast to int to handle the number being off slightly
-        self.assertEqual((int)(self.statistics.variance(data)), (int)(statistics.variance(data)))
+        self.assertEqual(int(self.statistics.variance(data)), int(statistics.variance(data)))
 
     def test_standard_deviation(self):
         data = getSample(self.getData(), 10)
         # had to cast to int to handle the number being off slightly
-        self.assertEqual((int)(self.statistics.standard_deviation(data)), (int)(statistics.stdev(data)))
+        self.assertEqual(int(self.statistics.standard_deviation(data)), int(statistics.stdev(data)))
 
     def getData(self):
         test_Data = CsvReader('Tests/Data/Stats_Test_Data.csv').data
