@@ -1,19 +1,21 @@
-from Calculator.addition import addition
-from Calculator.subtraction import subtraction
 from Calculator.division import division
+from Calculator.subtraction import subtraction
+from Calculator.addition import addition
 
 
-def median(data):
+def median(num):
     try:
-        total_values = len(data)
-        list_of_numbers = [data[i] for i in range(total_values)]
-        list_of_numbers.sort()
-        if total_values % 2 == 0:
-            median1 = list_of_numbers[int(total_values / 2)]
-            median2 = list_of_numbers[int(subtraction((total_values // 2), 1))]
-            result = division(addition(median1, median2), 2)
+        num_values = len(num)
+        list_num = [num[i] for i in range(num_values)]
+        list_num.sort()
+        if num_values % 2 == 0:
+            median1 = list_num[int(num_values // 2)]
+            median2 = list_num[int(subtraction((num_values // 2), 1))]
+            median_result = division(addition(median1, median2), 2)
         else:
-            result = list_of_numbers[int(division(total_values, 2))]
-        return result
+            median_result = list_num[int(division(num_values, 2))]
+        return median_result
+    except ZeroDivisionError:
+        print("Error: Can't Divide by 0")
     except ValueError:
-        print("ERROR!  That is an empty array.  Try again.")
+        print("Error: Check your data inputs")
