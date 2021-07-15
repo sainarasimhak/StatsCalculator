@@ -1,7 +1,8 @@
+[![Build Status](https://travis-ci.com/sainarasimhak/StatsCalculator.svg?branch=master)](https://travis-ci.com/sainarasimhak/StatsCalculator)
 
-# StatsCalculator
+## __StatsCalculator__
 
-# Project OverView
+## __Project OverView__
 
 1.Statistical Calculator with basic functions(Mean, Mode, Variance, Median, Standard Deviation).
 2.Using Random numbers as input with random number generator.
